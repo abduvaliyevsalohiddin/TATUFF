@@ -10,9 +10,9 @@ class BookCreateAPIView(CreateAPIView):
     serializer_class = BookSerializer
 
 
-class BoookListAPIView(ListAPIView):
+class BookListAPIView(ListAPIView):
+    queryset = Book.objects.all()
     serializer_class = BookSerializer
-    queryset = Book.obejcts.all()
 
 
 class BookRetrieveAPIView(RetrieveAPIView):
